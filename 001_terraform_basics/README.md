@@ -16,6 +16,7 @@
 
     **API-Driven Workflow:** Ideal for custom integrations and specialized pipelines. Example: A company has a complex CI/CD setup involving multiple tools. They use Terraform Cloud's API to trigger specific workflows, integrating Terraform runs with their custom tooling or pipeline logic.
 
+- we're going to go with the CLI-Driven Workflow
 - choose accordingly to your needs
 - give your project a name and description and create it
 
@@ -28,3 +29,6 @@
 - choose the description for it and set the expiration
 - copy the token, paste it in your console and confirm with "yes"
 - if successful you will se a Terraform logo with your user
+
+
+Now, in your console run **terraform init** 
