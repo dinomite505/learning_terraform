@@ -25,10 +25,24 @@
 
 - make sure you are properly authenticated **terraform login** command or use **credentials block**
 - if you use terraform login command, Terraform will generate an API token for your user and it will store that token and store it as a JSON file in the this folder /home/user/.terraform.d/credentials.tfrc.json
-- accept and then open given URL to create
-- choose the description for it and set the expiration
-- copy the token, paste it in your console and confirm with "yes"
+- accept and then open given URL to create the token
+- choose the description for it and set the expiration date/time and make sure you save the token for future use
+- copy the token, paste it in your console and confirm with "yes" 
 - if successful you will se a Terraform logo with your user
 
 
-Now, in your console run **terraform init** 
+Now, in your console run **terraform init adn terraform plan**
+
+
+In case you have a message like "No value for required variable" for e.g. *variable = "instance_type"* located in your .tfvars file, that is because what is going to be running Terraform is a server that is a part of Terraform cloud, and that run environment is actually executing your code.
+    In that case head over to your Terraform Cloud -> Workspaces & Projects -> choose your project -> Variables (on the left side)
+    Category of your variables can be:
+    *terraform* - e.g. variable = "instance_type" which can also be set as interpolated ( ${} )
+    *environment* - e.g. your AWS credentials e.g. AWS_ACCESS_KEY and AWS_SECRET_ACCESS_KEY (you can set them as **sensitive**)
+
+After all is set run **terraform apply**
+
+This will take a minute, but once it's done you should have the complete state of your infrastructure on Terraform Cloud (what is added and what is destroyed). Normally, you can find all that in your *terraform.tfstate.backup* file.
+
+
+
