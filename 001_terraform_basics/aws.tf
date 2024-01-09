@@ -28,22 +28,23 @@ components that can be managed together as a single unit.
 
 Terraform modules typically consist of:
 
-INPUT VARIABLES:
+INPUT VARIABLES - variables.tf
     Input variables are parameters that allow users of the module to provide specific values when they use the module.
     They serve as a way to customize the behavior of the module for different use cases.
 
-RESOURCE DEFINITIONS:
+RESOURCE DEFINITIONS - any .tf file
     A module defines the resources it creates or manages, allowing you to encapsulate complex infrastructure
     configurations into rusable components.
 
-LOCAL VALUES (Optional)
+LOCAL VALUES (Optional) - .tfvars
     Used to define intermediate values or calculations within the module's configuration. They are named values and they serve the
-    purpose of reducing duplication of the same value, increasing code radability. Locals are scoped only within a module (unlike input variables)
+    purpose of reducing duplication of the same value, increasing code radability. Unlike input variables which can be scoped
+    globally, locals are scoped only within a module. Those variable names need to match the declared variables in the module's variables.tf file.
 
 DATA SOURCES (Optional)
     Data sources enable you to retrieve information about existing resources or data form external sources
 
-PROVISIONERS (Optional)
+PROVISIONERS (Optional) - code-init or Packer
     Provisioners are used to execute scripts or commands on resources after they are created or updated. While they can be used
     within a module, it is generally recommended to avoid using provisioners unless there is no other alternative
 
