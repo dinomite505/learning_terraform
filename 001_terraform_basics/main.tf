@@ -1,4 +1,15 @@
 terraform {
+    # Backend can be local or remote
+    # backend "local"
+    backend "remote" {    
+    hostname = "app.terraform.io"
+    organization = "cloud505"
+
+    workspaces {
+        name = "getting-started"
+        }
+    }
+
     required_providers {
     aws = {
         source  = "hashicorp/aws"
