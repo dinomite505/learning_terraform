@@ -23,12 +23,12 @@
 - you will then be sent to that project
 - use the the given configuration block for any .tf file where you want to run Terraform
 
-- make sure you are properly authenticated **terraform login** command or use **credentials block**
-- if you use terraform login command, Terraform will generate an API token for your user and it will store that token and store it as a JSON file in the this folder /home/user/.terraform.d/credentials.tfrc.json
-- accept and then open given URL to create the token
-- choose the description for it and set the expiration date/time and make sure you save the token for future use
-- copy the token, paste it in your console and confirm with "yes" 
-- if successful you will se a Terraform logo with your user
+- Use **terraform login** command to authenticate with Terraform Cloud
+- With this command Terraform will generate an API token for your user and it will store that token
+- Accept and then open given URL to create the token
+- Choose the description for it and set the expiration date/time and make sure you save the token for future use
+- Copy the token, paste it in your console and confirm with "yes" 
+- If successful you will se a Terraform logo with your user
 
 
 Now, in your console run **terraform init adn terraform plan**
@@ -44,5 +44,4 @@ After all is set run **terraform apply**
 
 This will take a minute, but once it's done you should have the complete state of your infrastructure on Terraform Cloud (what is added and what is destroyed). Normally, you can find all that in your *terraform.tfstate.backup* file.
 
-
-
+On Terraform Cloud you will see all your runs, errors versions, in real time.
