@@ -1,16 +1,17 @@
-terraform {
+
     # Backend can be local or remote
     # backend "local"
     # To migrate from default local workspace to remote
-    backend "remote" {    
-        hostname = "app.terraform.io"
+terraform {
+    cloud {
         organization = "cloud505"
 
     workspaces {
         name = "getting-started"
         }
-    
-}
+    }
+
+
     required_providers {
     aws = {
         source  = "hashicorp/aws"
