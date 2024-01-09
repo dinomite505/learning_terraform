@@ -3,6 +3,8 @@
 - you can use multiple workspaces (e.g. prod, dev) for your project needs adn environments
 
 # Terraform Cloud
+- search Terraform Cloud in your web browser
+- you can also login with GitHub
 - create and account (no credit cards needed)
 - create an organization (you will use that name for the remote backend) 
 - create a workspace that you will use mentioned above (that name will also go in for remote backend)
@@ -20,3 +22,9 @@
 - you will then be sent to that project
 - use the the given configuration block for any .tf file where you want to run Terraform
 
+- make sure you are properly authenticated **terraform login** command or use **credentials block**
+- if you use terraform login command, Terraform will generate an API token for your user and it will store that token and store it as a JSON file in the this folder /home/user/.terraform.d/credentials.tfrc.json
+- accept and then open given URL to create
+- choose the description for it and set the expiration
+- copy the token, paste it in your console and confirm with "yes"
+- if successful you will se a Terraform logo with your user

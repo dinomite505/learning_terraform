@@ -1,6 +1,7 @@
 terraform {
     # Backend can be local or remote
     # backend "local"
+    # To migrate from default local workspace to remote
     backend "remote" {    
     hostname = "app.terraform.io"
     organization = "cloud505"
