@@ -54,10 +54,11 @@ On Terraform Cloud you will see all your runs, errors versions, in real time.
 3. Choose/create Workspace
 4. Choose your Workflow (CLI-Driven)
 5. Choose name and description of the project
-6. Back in your console **terraform login** (Generates API Token)
-7. Generate new or use existing API Token (Save the token somewhere and Copy/Paste to your console)
-8. Confirm with **yes** in the console
-9. Run **terraform init** first and then **terraform plan**
-10. If everything complies run **terraform apply**
-11. Check your state at *State* at your TF Cloud UI
-12. Clean up with **terraform destroy**
+6. Set your environment variables and your terraform variables
+7. Back in your console **terraform login** (Generates API Token)
+8. Generate new or use existing API Token (Save the token somewhere and Copy/Paste to your console)
+9. Confirm with **yes** in the console
+10. Run **terraform init** first and then **terraform plan**
+11. If everything complies run **terraform apply**
+12. Check your state at *State* at your TF Cloud UI
+13. Clean up with **terraform destroy**
