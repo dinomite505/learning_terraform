@@ -2,3 +2,5 @@
 - choose CLI-Driven workflow
 - copy CLI-driven runs
 - paste it to newly created main.tf file
+- set up your environment variables for AWS access
+- 
