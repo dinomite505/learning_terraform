@@ -31,7 +31,7 @@
 - If successful you will se a Terraform logo with your user
 
 
-Now, in your console run **terraform init adn terraform plan**
+Now, in your console run **terraform init and terraform plan**
 
 
 In case you have a message like "No value for required variable" for e.g. *variable = "instance_type"* located in your .tfvars file, that is because what is going to be running Terraform is a server that is a part of Terraform cloud, and that run environment is actually executing your code.
@@ -45,3 +45,19 @@ After all is set run **terraform apply**
 This will take a minute, but once it's done you should have the complete state of your infrastructure on Terraform Cloud (what is added and what is destroyed). Normally, you can find all that in your *terraform.tfstate.backup* file.
 
 On Terraform Cloud you will see all your runs, errors versions, in real time.
+
+
+**Complete Workflow**
+
+1. Login into Terraform Cloud 
+2. Choose/create Organization
+3. Choose/create Workspace
+4. Choose your Workflow (CLI-Driven)
+5. Choose name and description of the project
+6. Back in your console **terraform login** (Generates API Token)
+7. Generate new or use existing API Token (Save the token somewhere and Copy/Paste to your console)
+8. Confirm with **yes** in the console
+9. Run **terraform init** first and then **terraform plan**
+10. If everything complies run **terraform apply**
+11. Check your state at *State* at your TF Cloud UI
+12. Clean up with **terraform destroy**
