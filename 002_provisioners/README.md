@@ -1,0 +1,4 @@
+- create a new Workspace on TF Cloud
+- choose CLI-Driven workflow
+- copy CLI-driven runs
+- paste it to newly created main.tf file
